@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../stylesheets/calendar.css">
+  <title>Calendar</title>
+</head>
+<body>
+  <table>
+    <caption><%= month_name %></caption>
+    <tr>
+      <th>SUN</th>
+      <th>MON</th>
+      <th>TUE</th>
+      <th>WED</th>
+      <th>THU</th>
+      <th>FRI</th>
+      <th>SAT</th>
+    </tr>
+    <% var count = 0, day = 0; %>
+    <% for(var i = 0; i < rows; i++) { %>
+      <tr>
+        <% for(var j = 0; j < 7; j++) { %>
+          <% if (day) { if (day < lastday) { %>
+            <% day ++; %>
+            <td><%= day %></td>
+          <% }} else if (count == firstday) { %>
+            <% day ++; %>
+            <td><%= day %></td>
+          <% } else { %>
+            <td>0</td>
+            <% count += 1; %>
+          <% } %>
+        <% } %>
+      </tr>
+    <% } %>
+  </table>
+  <nav>
+    <a class="btn btn-alt" href="/calendar/<%= last_year %>/<%= last_month %>">Last Month</a>
+    <a class="btn btn-alt" href="/calendar/<%= next_year %>/<%= next_month %>">Next Month</a>
+  </nav>
+</body>
+</html>

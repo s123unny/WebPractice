@@ -1,0 +1,114 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+table {
+  position: relative;
+  margin: 0 auto;
+  width: 95%; }
+
+caption {
+  font-size: 40px;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+  padding: 12px 0; }
+
+td {
+  position: relative;
+  border: 1px solid #cecfd5;
+  vertical-align: top;
+  text-align: left; }
+  @media (max-width: 735px) {
+    td {
+      height: 60px;
+      width: 100px;
+      padding: 5px; } }
+  @media (max-width: 479px) {
+    td {
+      width: 68px;
+      height: 40px; } }
+  @media (min-width: 736px) {
+    td {
+      width: 150px;
+      height: 80px;
+      padding: 10px;
+      overflow: hidden; } }
+  @media (min-width: 980px) {
+    td {
+      height: 100px; } }
+  @media (min-width: 1200px) {
+    td {
+      height: 120px; } }
+  td:first-child, td:last-child {
+    background: #ffb6c1;
+    color: #ee0000; }
+  td ul {
+    color: black;
+    position: absolute;
+    margin: 0;
+    padding: 0px 2px 0px 10px; }
+    @media (min-width: 736px) {
+      td ul {
+        width: 250px;
+        left: 8px;
+        height: 40px; } }
+    @media (min-width: 980px) {
+      td ul {
+        height: 60px; } }
+    @media (min-width: 1200px) {
+      td ul {
+        height: 80px; } }
+    @media (max-width: 735px) {
+      td ul {
+        width: 200px;
+        top: 250px;
+        left: 20px;
+        height: 20%;
+        visibility: hidden; } }
+    @media (max-width: 479px) {
+      td ul {
+        top: 170px; } }
+  td:hover, #CurrentDate:hover {
+    background: #c1ffc1;
+    overflow: visible; }
+    @media (max-width: 735px) {
+      td:hover ul, #CurrentDate:hover ul, td:hover li, #CurrentDate:hover li {
+        visibility: visible; } }
+
+.vacation {
+  background: #ffb6c1;
+  color: #ee0000; }
+
+#CurrentDate {
+  background: #bbe2ff; }
+
+nav {
+  text-align: center;
+  margin: 10px 0; }
+  @media (max-width: 735px) {
+    nav {
+      position: absolute;
+      margin-top: 80px;
+      width: 100%; } }
+
+.btn {
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 10px;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none; }
+
+a:visited {
+  font-weight: normal;
+  color: green; }
+
+.btn-alt {
+  border: 1px solid #dfe2e5;
+  padding: 10px 10px; }
+
+/*# sourceMappingURL=calendar.css.map */
