@@ -2,6 +2,17 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res) {
+  const { exec } = require('child_process');
+  exec('cat *.js  | wc -l', (err, stdout, stderr) => {
+    if (err) {
+      // node couldn't execute the command
+      return;
+    }
+
+    // the *entire* stdout and stderr (buffered)
+    console.log(`stdout: ${stdout}`);
+    console.log(`stderr: ${stderr}`);
+  });
   res.render('events', { // 輸出
     data: 'please give me /$year/$month behind the URL'
   });

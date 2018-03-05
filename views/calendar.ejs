@@ -18,17 +18,21 @@
       <th>SAT</th>
     </tr>
     <% var count = 0, day = 0; %>
-    <% for(var i = 0; i < rows; i++) { %>
+    <% for(var i = 1; i < rows; i++) { %>
       <tr>
         <% for(var j = 0; j < 7; j++) { %>
-          <% if (day) { if (day < lastday) { %>
-            <% day ++; %>
-            <td><%= day %></td>
-          <% }} else if (count == firstday) { %>
+          <% if (day) { %>
+		  	<% if ( day < lastday) { %>
+              <% day ++; %>
+              <td><%= day %></td>
+            <% } else { %>
+			  <td></td>
+		  	<% } %>
+		  <% } else if (count == firstday) { %>
             <% day ++; %>
             <td><%= day %></td>
           <% } else { %>
-            <td>0</td>
+            <td></td>
             <% count += 1; %>
           <% } %>
         <% } %>
